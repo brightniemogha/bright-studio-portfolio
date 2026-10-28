@@ -1,0 +1,135 @@
+# Decap CMS configuration
+# Log in at /admin after enabling Netlify Identity and Git Gateway.
+#
+# The content source is public/data/content.json. The site fetches it at
+# runtime via /cms-bind.js, and the build copies it into src/data as the
+# bundled fallback (scripts/sync-content.mjs). Edit it here, never in a component.
+
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: false
+
+media_folder: "public/images/projects"
+public_folder: "/images/projects"
+
+logo_url: "/favicon.svg"
+
+collections:
+  - name: website
+    label: Website
+    description: Brand, contact details, pricing link and the project gallery.
+    files:
+      - name: content
+        label: Content and projects
+        file: "public/data/content.json"
+        description: Everything on the portfolio that should be editable lives here.
+        fields:
+          - label: Brand
+            name: brand
+            widget: object
+            fields:
+              - label: Brand name
+                name: name
+                widget: string
+                hint: The one place the studio name lives. It updates the logo, footer, WhatsApp greeting and page metadata.
+              - label: Tagline
+                name: tagline
+                widget: text
+                hint: Used as the hero headline and footer line. Keep it one confident sentence.
+          - label: Contact details
+            name: contact
+            widget: object
+            fields:
+              - label: WhatsApp number (international format, digits only)
+                name: whatsapp
+                widget: string
+                hint: "Example: 2347066174484. Do not include +, spaces or brackets."
+              - label: WhatsApp number (how it is shown on the site)
+                name: whatsappDisplay
+                widget: string
+                hint: "Example: 0706 617 4484"
+              - label: Email address
+                name: email
+                widget: string
+              - label: Studio location
+                name: location
+                widget: string
+                hint: "Example: Lagos, Nigeria"
+          - label: Pricing link
+            name: pricingUrl
+            widget: string
+            hint: The pricing button links here. Use a full https:// URL. No prices are written into the site.
+          - label: Projects
+            name: projects
+            widget: list
+            label_singular: Project
+            summary: "{{title}} — {{industry}} ({{style}})"
+            hint: Drag to reorder. The order here is the order shown on the site.
+            fields:
+              - label: Project name
+                name: title
+                widget: string
+              - label: Industry
+                name: industry
+                widget: select
+                options:
+                  - Restaurants
+                  - Hotels
+                  - E-commerce
+                  - Logistics and Shipping
+                  - Law Firms
+                  - Poultry and Agriculture
+                  - Insurance
+                  - Events
+                  - Personal Brands
+              - label: Style
+                name: style
+                widget: select
+                options:
+                  - Dark Luxury
+                  - Clean Minimal
+                  - Bold and Colorful
+                  - Editorial
+              - label: Project type
+                name: type
+                widget: select
+                options:
+                  - label: Demo
+                    value: demo
+                  - label: Client project
+                    value: client
+                default: demo
+                hint: Only use "Client project" for work you have permission to publish.
+              - label: Live site URL
+                name: liveUrl
+                widget: string
+                required: false
+                hint: Leave blank for a sample. With no URL, "View live site" opens the built-in preview instead.
+              - label: Screenshot / photograph
+                name: image
+                widget: image
+                required: true
+                choose_url: true
+                allow_multiple: false
+                hint: Use a wide image (roughly 16:10). Upload a screenshot, or choose "Insert from URL" to keep a hosted Unsplash URL. Images below the fold load lazily.
+              - label: Image description
+                name: imageAlt
+                widget: string
+                required: false
+                hint: One plain sentence describing the photograph, for screen readers.
+              - label: Preview headline
+                name: headline
+                widget: string
+                required: false
+                hint: The short headline shown inside the website preview. Two to seven words works best.
+              - label: Description
+                name: description
+                widget: text
+                hint: One or two plain sentences about the business. No invented results.
+              - label: Placeholder
+                name: placeholder
+                widget: boolean
+                default: true
+                hint: Keep this on for samples. It displays the bold red REPLACE ME ribbon so a demo cannot be published by accident.

@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "name": "Bright Studio",
+    "tagline": "Websites that make Nigerian businesses look premium."
+  },
+  "contact": {
+    "whatsapp": "2347066174484",
+    "whatsappDisplay": "0706 617 4484",
+    "email": "writewithbright@gmail.com",
+    "location": "Lagos, Nigeria"
+  },
+  "pricingUrl": "https://wa.me/2347066174484?text=Hi%2C%20can%20you%20send%20me%20your%20pricing%3F",
+  "projects": [
+    {
+      "title": "Tola's Kitchen",
+      "industry": "Restaurants",
+      "style": "Dark Luxury",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+      "description": "A Lekki dining room built around slow evenings and a short, confident menu.",
+      "placeholder": true,
+      "headline": "Nigerian food, done properly.",
+      "imageAlt": "Warm, low-lit restaurant interior with set tables"
+    },
+    {
+      "title": "Suya Republic",
+      "industry": "Restaurants",
+      "style": "Bold and Colorful",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+      "description": "A grill house in Abuja with a late-night crowd and a menu worth sharing.",
+      "placeholder": true,
+      "headline": "Fresh off the grill.",
+      "imageAlt": "Chef-plated dish on a dark restaurant table"
+    },
+    {
+      "title": "The Ivory Court",
+      "industry": "Hotels",
+      "style": "Clean Minimal",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+      "description": "A boutique hotel in Enugu for people who value a quiet, considered stay.",
+      "placeholder": true,
+      "headline": "A calmer place to land.",
+      "imageAlt": "Resort pool lined with palm trees at dusk"
+    },
+    {
+      "title": "Palm Ridge Hotel",
+      "industry": "Hotels",
+      "style": "Editorial",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1611892440504-42a792e24d32",
+      "description": "A six-room retreat in Ibadan, designed for long weekends and short escapes.",
+      "placeholder": true,
+      "headline": "Rest in the middle of everything.",
+      "imageAlt": "Low-lit hotel bedroom with dark timber panelling"
+    },
+    {
+      "title": "Adunni Studio",
+      "industry": "E-commerce",
+      "style": "Bold and Colorful",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8",
+      "description": "A Lagos ready-to-wear label with small runs and strong silhouettes.",
+      "placeholder": true,
+      "headline": "Made for the way you move.",
+      "imageAlt": "Clothing rail in a minimalist fashion store"
+    },
+    {
+      "title": "Kalamu Freight",
+      "industry": "Logistics and Shipping",
+      "style": "Clean Minimal",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3",
+      "description": "A freight forwarder moving goods between Apapa, Lagos and the wider world.",
+      "placeholder": true,
+      "headline": "Cargo, cleared without the drama.",
+      "imageAlt": "Aerial view of stacked shipping containers at port"
+    },
+    {
+      "title": "Okafor & May LLP",
+      "industry": "Law Firms",
+      "style": "Dark Luxury",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f",
+      "description": "A commercial law practice in Victoria Island, clear in its thinking and its fees.",
+      "placeholder": true,
+      "headline": "Counsel you can act on.",
+      "imageAlt": "Bronze Lady Justice statue holding balanced scales"
+    },
+    {
+      "title": "Greenfield Poultry",
+      "industry": "Poultry and Agriculture",
+      "style": "Clean Minimal",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7",
+      "description": "A family-run poultry farm in Ogun State, supplying homes and restaurants daily.",
+      "placeholder": true,
+      "headline": "From our farm to your table.",
+      "imageAlt": "Healthy brown hen on a working poultry farm"
+    },
+    {
+      "title": "Roots & Grain",
+      "industry": "Poultry and Agriculture",
+      "style": "Editorial",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854",
+      "description": "A smallholder co-operative in Jos selling produce with provenance and pride.",
+      "placeholder": true,
+      "headline": "Good food starts in the soil.",
+      "imageAlt": "Rows of crops on a farm at golden hour"
+    },
+    {
+      "title": "Cedar Assurance",
+      "industry": "Insurance",
+      "style": "Bold and Colorful",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+      "description": "A young insurance broker making home and business cover easier to understand.",
+      "placeholder": true,
+      "headline": "Cover that actually covers you.",
+      "imageAlt": "Model house resting beside a set of house keys"
+    },
+    {
+      "title": "The Oduya Social",
+      "industry": "Events",
+      "style": "Editorial",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552",
+      "description": "An event studio in Lagos for weddings, launches and dinners people talk about.",
+      "placeholder": true,
+      "headline": "Gather well. Remember it.",
+      "imageAlt": "Couple holding hands at an outdoor ceremony"
+    },
+    {
+      "title": "Nadia Cole",
+      "industry": "Personal Brands",
+      "style": "Dark Luxury",
+      "type": "demo",
+      "liveUrl": "",
+      "image": "https://images.pexels.com/photos/32288633/pexels-photo-32288633.jpeg",
+      "description": "A Lagos-based brand strategist working with founders who prefer straight talk.",
+      "placeholder": true,
+      "headline": "Strategy, without the noise.",
+      "imageAlt": "Confident Nigerian woman in a tailored orange blazer"
+    }
+  ]
+}

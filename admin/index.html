@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <title>Content studio — portfolio manager</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: #0b0b0c;
+        color: #f2efe8;
+        font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      }
+
+      .admin-loading {
+        display: flex;
+        min-height: 100svh;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .admin-loading div {
+        max-width: 360px;
+      }
+
+      .admin-mark {
+        width: 28px;
+        height: 28px;
+        margin: 0 auto 20px;
+        color: #f5b544;
+      }
+
+      .admin-loading p {
+        margin: 8px 0 0;
+        color: #a29e94;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .admin-home {
+        position: fixed;
+        bottom: 14px;
+        left: 14px;
+        z-index: 9999;
+        padding: 8px 11px;
+        border: 1px solid rgba(242, 239, 232, 0.18);
+        border-radius: 3px;
+        background: rgba(11, 11, 12, 0.8);
+        color: #d8d3c8;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .admin-home:hover {
+        border-color: #f5b544;
+        color: #f5b544;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nc-root"></div>
+
+    <div class="admin-loading" id="admin-loading">
+      <div>
+        <svg class="admin-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M12 2.5v19M3.2 7.25l17.6 9.5M20.8 7.25l-17.6 9.5"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+        </svg>
+        <p>Opening the content studio…</p>
+        <p style="font-size: 11px">
+          If this does not load, check that Netlify Identity and Git Gateway are enabled,
+          then reload.
+        </p>
+      </div>
+    </div>
+
+    <a class="admin-home" href="/">← View site</a>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      (function () {
+        var loading = document.getElementById("admin-loading");
+        var root = document.getElementById("nc-root");
+        if (loading && root && window.MutationObserver) {
+          var observer = new MutationObserver(function () {
+            if (root.childElementCount > 0) {
+              loading.remove();
+              observer.disconnect();
+            }
+          });
+          observer.observe(root, { childList: true });
+        }
+
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", function (user) {
+            if (!user) {
+              window.netlifyIdentity.on("login", function () {
+                document.location.href = "/admin/";
+              });
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
